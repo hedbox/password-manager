@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "electron": "electron .",
     "electron-build": "ng build --prod && electron .",
-    "pack" : "asar pack password-manager-win32-x64/resources/app/ password-manager-win32-x64/resources/app.asar && rm -rf password-manager-win32-x64/resources/app/"
+    "pack": "asar pack password-manager-win32-x64/resources/app/ password-manager-win32-x64/resources/app.asar && rm -rf password-manager-win32-x64/resources/app/"
   },
   "private": true,
   "dependencies": {
@@ -38,7 +38,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "electron": "^7.1.2",
-    "electron-packager": "^14.1.0",
+    "electron-packager": "^14.1.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",

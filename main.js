@@ -19,7 +19,7 @@ function createWindow () {
   //win.loadFile('/dist/password-manager/index.html')
 
   // Ouvre les DevTools.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   // Émit lorsque la fenêtre est fermée.
   win.on('closed', () => {

@@ -3,6 +3,7 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+
 trigger:
 - master
 
@@ -20,3 +21,14 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+
+- script: npx ng test --watch=false
+  displayName: 'Tests'
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: 'JUnit'
+    # Make sure you've changed testResultsFiles to the one below 
+    testResultsFiles: '**/TESTS-*.xml'
+  displayName: 'Publish Test Results'
